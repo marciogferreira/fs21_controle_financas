@@ -7,5 +7,5 @@ const PrivateRoute = express.Router()
 PrivateRoute.use(AutenticacaoMiddleware)
 PrivateRoute.use(UsuariosRoute)
 PrivateRoute.use(CartaoRoute)
-
+PrivateRoute.use(CategoriaRoute)
 module.exports = PrivateRoute
