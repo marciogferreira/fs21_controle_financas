@@ -13,7 +13,7 @@ const MetasDesejosModel = Conexao.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'categorias',
+                model: CategoriaModel,
                 key: 'id'
             }
         },
