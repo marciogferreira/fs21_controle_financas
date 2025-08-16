@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize')
 const Conexao = require('../config/conexao.js')
 
-const BancoModel = Conexao.define(
-    "BancoModel", 
+const CategoriaModel = Conexao.define(
+    "CategoriaModel", 
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,21 +13,17 @@ const BancoModel = Conexao.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        saldo: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        
-        },
         descricao: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-     
-    
+      
+      
+        
     }, 
     {
-        tableName: 'bancos'
+        tableName: 'categorias'
     }
 )
 
-module.exports = BancoModel;
+module.exports = CategoriaModel;

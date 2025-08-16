@@ -16,7 +16,6 @@ const BancoModel = {
 
         try {
             const dados = request.body;
-            await BancoServices.validandoBanco(dados);
             await BancoModel.create(dados);
             return response.json({ 
                 message: 'Banco adicionado com sucesso!',
@@ -31,7 +30,6 @@ const BancoModel = {
     atualizar: async (request, response) => {
         const dados = request.body;
         const id = request.params.id;
-        dados.senha = Helpers.crypto(dados.senha);
         await BancoModel.update(dados, {
             where: {
                 id: id
