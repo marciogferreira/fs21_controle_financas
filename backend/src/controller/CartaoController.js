@@ -1,4 +1,4 @@
-const CartaoModel = require('../model/CartaoModel');
+const CategoriaModel = require('../model/CartaModel');
 const ErrorServices = require('../services/ErrorServices');
 
 const CartaoController = {
