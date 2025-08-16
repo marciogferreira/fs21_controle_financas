@@ -16,12 +16,13 @@ const BancoModel = Conexao.define(
         saldo: {
             type: DataTypes.STRING,
             allowNull: false,
+            
         },
         descricao: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        
+       
     }, 
     {
         tableName: 'bancos'
