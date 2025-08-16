@@ -1,8 +1,9 @@
 const { DataTypes } = require('sequelize')
-const Conexao = require('../config/conexao.js')
+const Conexao = require('../config/conexao.js');
+const BancoModel = require('./BancoModel.js');
 
-const DespesasModel = Conexao.define(
-    "DespesasModel", 
+const ReceitasModel = Conexao.define(
+    "ReceitasModel", 
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,47 +14,46 @@ const DespesasModel = Conexao.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        valor: {
+         valor: {
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },
+        categoria_id: {
             type: DataTypes.STRING,
             allowNull: false,
-            
-        },
-        
-        categoria_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
+            references:{
                 key: 'id',
-                model: CategoriaModel
+                model:CategoriaModel
             }
+        
         },
-
         data_vencimento: {
             type: DataTypes.DATE,
-            allowNull: false,
-            
+            allowNull: false
         },
-
-       banco_id: {
+        banco_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
+            references:{
                 key: 'id',
-                model: BancoModel
+                model:BancoModel
             }
+
         },
         cartao_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
+            references:{
                 key: 'id',
-                model: CartaoModel
+                model:CartaoModel
             }
-        },
+            
+            
+        }
     }, 
     {
-        tableName: 'despesas'
+        tableName: 'receitas'
     }
 )
 
-module.exports = DespesasModel;
+module.exports = ReceitasModel;
