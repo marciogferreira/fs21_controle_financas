@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>RESTful e RESTful API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <section>
+        <h1>RESTful & RESTful API</h1>
+        <p>Introdução ao padrão REST e como construir APIs RESTful</p>
+      </section>
+
+      <section>
+        <h2>O que é REST?</h2>
+        <ul>
+          <li>REST = Representational State Transfer</li>
+          <li>Um estilo de arquitetura para sistemas distribuídos</li>
+          <li>Popularizado por Roy Fielding em sua tese de doutorado (2000)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Como surgiu o REST?</h2>
+        <ul>
+          <li>Criado como parte do desenvolvimento da arquitetura da Web</li>
+          <li>Necessidade de padronizar a comunicação entre sistemas</li>
+          <li>Baseado nos princípios do HTTP</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>RESTful API</h2>
+        <ul>
+          <li>Uma API que segue os princípios REST</li>
+          <li>Utiliza HTTP como protocolo de comunicação</li>
+          <li>Realiza operações com os métodos: GET, POST, PUT, DELETE</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>EndPoints</h2>
+        <p>URL que representa um recurso</p>
+        <pre><code>GET /api/usuarios</code></pre>
+        <pre><code>POST /api/usuarios</code></pre>
+        <pre><code>GET /api/usuarios/1</code></pre>
+        <pre><code>PUT /api/usuarios/1</code></pre>
+        <pre><code>DELETE /api/usuarios/1</code></pre>
+      </section>
+
+      <section>
+        <h2>Cabeçalhos (Headers)</h2>
+        <ul>
+          <li>Authorization: token ou credenciais</li>
+          <li>Content-Type: tipo do conteúdo (ex: application/json)</li>
+          <li>Accept: tipo de resposta esperada</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Códigos de Status (HTTP)</h2>
+        <ul>
+          <li><strong>200 OK</strong>: Requisição bem-sucedida</li>
+          <li><strong>201 Created</strong>: Recurso criado</li>
+          <li><strong>400 Bad Request</strong>: Erro no cliente</li>
+          <li><strong>401 Unauthorized</strong>: Autenticação falhou</li>
+          <li><strong>404 Not Found</strong>: Recurso não encontrado</li>
+          <li><strong>500 Internal Server Error</strong>: Erro no servidor</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Boas Práticas</h2>
+        <ul>
+          <li>Utilize substantivos nos endpoints (ex: /usuarios)</li>
+          <li>Use corretamente os métodos HTTP</li>
+          <li>Inclua mensagens de erro claras</li>
+          <li>Versão da API na URL (ex: /api/v1/)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>REST x SOAP</h2>
+        <ul>
+          <li>REST: mais leve, usa JSON, baseado em HTTP</li>
+          <li>SOAP: mais pesado, usa XML, requer contratos (WSDL)</li>
+          <li>REST é mais popular para aplicações Web e Mobile</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Exemplo de Requisição</h2>
+        <pre><code class="language-bash">
+curl -X POST https://api.exemplo.com/usuarios \
+  -H "Content-Type: application/json" \
+  -d '{"nome":"Maria","email":"maria@email.com"}'
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Perguntas e Respostas</h2>
+        <ol>
+          <li>O que é um recurso em uma API REST?</li>
+          <li>Qual a diferença entre PUT e PATCH?</li>
+          <li>Quais são os principais métodos HTTP?</li>
+          <li>Quando utilizar o status 204?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Outros Conceitos Relacionados</h2>
+        <ul>
+          <li>JSON e XML</li>
+          <li>Autenticação com JWT</li>
+          <li>CORS</li>
+          <li>OpenAPI / Swagger</li>
+          <li>Testes com Postman</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Referências</h2>
+        <ul>
+          <li>https://restfulapi.net</li>
+          <li>https://developer.mozilla.org/pt-BR/docs/Web/HTTP</li>
+          <li>https://swagger.io</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>Obrigado!</h1>
+        <p>Dúvidas? Vamos praticar com exemplos!</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+</html>
