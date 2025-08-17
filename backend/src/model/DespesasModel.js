@@ -1,5 +1,8 @@
 const { DataTypes } = require('sequelize')
 const Conexao = require('../config/conexao.js')
+const CategoriaModel = require('./CategoriaModel.js')
+const BancoModel = require('./BancoModel.js')
+const CartaoModel = require('./CartaoModel.js')
 
 const DespesasModel = Conexao.define(
     "DespesasModel", 

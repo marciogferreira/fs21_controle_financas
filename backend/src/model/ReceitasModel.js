@@ -1,6 +1,8 @@
 const { DataTypes } = require('sequelize')
 const Conexao = require('../config/conexao.js');
 const BancoModel = require('./BancoModel.js');
+const CategoriaModel = require('./CategoriaModel.js');
+const CartaoModel = require('./CartaoModel.js');
 
 const ReceitasModel = Conexao.define(
     "ReceitasModel", 
@@ -19,7 +21,7 @@ const ReceitasModel = Conexao.define(
             allowNull: false
         },
         categoria_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references:{
                 key: 'id',

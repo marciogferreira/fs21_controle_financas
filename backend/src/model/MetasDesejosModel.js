@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize')
 const Conexao = require('../config/conexao.js')
+const CategoriaModel = require('./CategoriaModel.js')
 
 const MetasDesejosModel = Conexao.define(
     "MetasDesejosModel", 
